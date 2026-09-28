@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Javascript</title>
+  </head>
+  <body>
+    <script>
+      const nama = "Dayat";
+      const nilaiTeori = 90;
+      const nilaiPraktek = 85;
+      const pelanggaran = false;
+      const kehadiran = 20;
+
+      console.log("Nama: " + nama);
+      console.log("Rata-rata: " + (nilaiTeori + nilaiPraktek) / 2);
+
+      if (nilaiTeori < 90) {
+        console.log("Status: Tidak Lulus(Nilai Teori Kurang)");
+      } else if (nilaiPraktek < 80) {
+        console.log("Status: Tidak Lulus");
+      } else if (pelanggaran === true) {
+        console.log("Status: Tidak Lulus(Pelanggaran Disiplin)");
+      } else if (kehadiran < 90) {
+        console.log("Status: Tidak Lulus(Kehadiran Kurang)");
+      } else if (nilaiTeori + nilaiPraktek / 2 > 90) {
+        console.log("Status: Lulus Dengan Predikat Sangat Baik");
+      } else if (nilaiTeori + nilaiPraktek / 2 > 85) {
+        console.log("Status: Lulus(Predikat baik)");
+      } else {
+        console.log("Status: Lulus");
+      }
+    </script>
+  </body>
+</html>

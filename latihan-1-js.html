@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript</title>
+  </head>
+  <body>
+    <script>
+      // Variabel
+      let nama = "Anton";
+      console.log(nama);
+
+      var alamat = "bogor";
+      var alamat = "jakarta";
+      console.log(alamat);
+
+      const nilaiTetap = 10;
+      console.log(nilaiTetap);
+
+      // Object & Immutability
+      const peserta = {
+        nama: "Tono",
+      };
+      peserta.alamat = "Ciganjur";
+      console.log(peserta);
+      // Immutability : Membuat object baru menggunakan spred perator (...)
+      const pesertaBaru = { ...peserta, nim: "8184" };
+      console.log(pesertaBaru);
+
+      // string $ template literas
+      const namaDepan = "Susi";
+      const namaBelakang = "Pujiastuti";
+
+      let literalsContoh = `
+        Nama Depan : ${namaDepan}
+        Nama Belakang : ${namaBelakang}
+        `;
+      console.log(namaDepan + " " + namaBelakang);
+      console.log(literalsContoh);
+
+      //  Operator Aritmatika $ Assigment
+      let angkaPertama = 2;
+      let angkaKedua = 3;
+
+      let a = 7;
+      a += 10;
+      console.log(a);
+
+      // Operator Pembagian & Logika
+      let user = "admin";
+      let password = "12345";
+
+      if (user === "asdbf" && password === "wbhdajsh") {
+        console.log("Login Success");
+      } else {
+        console.log("Login Gagal");
+      }
+      console.log("5 > 10 :", 5 > 10);
+      console.log("5 < 10 :", 5 < 10);
+
+      // If Tenery
+
+      let umur = "20";
+
+      if (umur >= 17) {
+        console.log("Dewasa");
+      } else {
+        console.log("bocil");
+      }
+
+      let tenaryyy = umur >= 17 ? "Dewasa" : "Bocil";
+      console.log(tenaryyy);
+
+      // Swicth Case
+      const userName = "admin";
+      switch (userName) {
+        case "pimpinan":
+          console.log("Ini Pimpinan");
+          break;
+
+        case "kasir":
+          console.log("Ini Kasir");
+          break;
+
+        case "admin":
+          console.log("Ini admin");
+          break;
+        default:
+          break;
+      }
+
+      // Tugas 1
+      const beratPaket = 10;
+      const kotaTujuan = "Jakarta";
+
+      if (kotaTujuan === "Bogor") {
+        console.log(beratPaket * 2000);
+      } else if (kotaTujuan === "Depok") {
+        console.log(beratPaket * 4000);
+      } else {
+        console.log(beratPaket * 6000);
+      }
+
+      // Function
+      function demoScope() {
+        if (true) {
+          var varVariable = "Saya var (Function Scope)";
+          let letVariable = "Saya let (Function Scope)";
+          const constVariable = "Saya const (Function Scope)";
+        }
+        // console.log(varVariable);
+        // console.log(letVariable);
+        // console.log(constVariable);
+      }
+      demoScope();
+
+      //   Tradisional Function Expression (ES5)
+      const squareES5 = function (x) {
+        return x * x;
+      };
+      console.log(squareES5(5));
+
+      // Arrow Function
+      const squareES6 = (x) => {
+        return x * x;
+      };
+      console.log(squareES6(2));
+
+      //  Arrow Function (ES6+) - IMPLICIT RETURN
+      const squareES6Implicit = (x) => x * x;
+      console.log(squareES6Implicit(4));
+
+      //  Penggunaan pada Method Array
+      const fruits = ["apel", "nanas", "durian"];
+      const squareFruits = fruits.map((fruit) => fruit);
+      console.log(squareFruits);
+
+      // looping For, While, Do... While...
+      for (let index = 1; index < 5; index++) {
+        console.log("Perulangan ke- " + index);
+      }
+
+      let no = 1;
+      while (no <= 5) {
+        console.log(`Ini Nomor Ke- ${no}`);
+        no++;
+      }
+
+      let x = 1;
+      do {
+        console.log(`Nilai x = ${x}`);
+        x++;
+      } while (x <= 5);
+
+      //   Tugas 2
+    </script>
+  </body>
+</html>

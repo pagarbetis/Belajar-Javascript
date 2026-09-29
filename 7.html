@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM || Document obejct model</title>
+  </head>
+  <body>
+    <h1 id="title"></h1>
+    <p id="description"></p>
+    <p id="status"></p>
+
+    <div id="modul"></div>
+    <ul id="modulUl"></ul>
+
+    <script>
+      const body = document.body;
+      const title = document.getElementById("title");
+      const desc = document.getElementById("description");
+      const status = document.querySelector("#status");
+
+      body.style.background = "black";
+      title.style.color = "green";
+      title.innerText = "PPKD Jakarta Pusat";
+
+      desc.style.color = "green";
+      desc.innerText = "Selamat Datang DI PPKD Jakarta Pusat";
+
+      status.style.color = "green";
+      status.innerText = "Tersertifikasi BNSP";
+
+      const listUnit = [
+        "09808 - Mengimplementasikan Interface",
+        "6374237 - Melakukan Instalasi Software Tools Pemrograman",
+      ];
+
+      // creat element
+      const modul = document.getElementById("modul");
+      const modulUl = document.getElementById("modulUl");
+      listUnit.forEach((unitText) => {
+        const itemLi = document.createElement("li");
+
+        itemLi.innerText = unitText;
+        itemLi.style.marginBottom = "8px";
+        itemLi.style.color = "green";
+
+        modulUl.appendChild(itemLi);
+      });
+      const isiModul = document.createElement("p");
+      isiModul.innerText = "Laravel adalah framework php";
+      isiModul.style.color = "Green";
+
+      modul.appendChild(isiModul);
+    </script>
+  </body>
+</html>

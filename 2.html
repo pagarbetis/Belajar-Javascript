@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Javascript</title>
+  </head>
+  <body>
+    <script>
+      const nilai1 = 1;
+      const nilai2 = 2;
+      const jumlah = nilai1 + nilai2; //concanate (+): penggabung string
+
+      //console.log(): salah satu fitur buat melihat hasil daripada variable yang ingin dicetak
+      console.log(jumlah);
+
+      //   assigment operator: menambahkan nilai ke dalam suatu variable
+      let total = 100;
+      total += 50;
+      total -= 20;
+
+      console.log(total); //130
+
+      // Operator increment dan decrement : menambah dan mengurang
+      let nomor = 1;
+      nomor++;
+      nomor++;
+      nomor--;
+
+      // Operator perbandingan : <(lebih kecil), >(lebih besar), ===(membandingkan sampai ke tipe data), ==(membandingkan), !==(tidak sama dengan)
+
+      let nama = "Budi";
+      let konfirmasiNama = "Budi";
+      let konfirmasi = nama === konfirmasiNama; //true
+
+      let umur = 20;
+      let batasUmur = 17;
+      let batasan = umur > 17;
+
+      //   Operator logika : &&, OR, !
+      let budi = "Budi";
+      let andi = "Andi"
+    //   (username === "admin" && pasword === "admin");
+
+      //   Operator ternary
+      const age = 20;
+      if (age >= 17) {
+        console.log("Dewasa");
+      } else {
+        console.log("Anak-anak");
+      }
+
+      const statusAge = age >= 17 ? "Dewasa" : "Anak-anak";
+      console.log(statusAge);
+    </script>
+  </body>
+</html>

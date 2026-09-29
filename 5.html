@@ -1,0 +1,30 @@
+<!-- Array: Struktur data yang bisa menyimpan data lebih dari satu -->
+
+<script>
+  let nama = ["Budi", "Laras", "Andi"]; // 0, 1, 2
+  const keranjang = ["Buah", "Sayuran", "Ikan"]; // 0, 1, 2
+
+  console.log(nama[0]);
+  console.log(nama[1]);
+  console.log(nama[2]);
+  //   ganti nilai Andi
+  nama[2] = "Agung";
+  console.log(nama);
+  nama.push("Dayat");
+  nama.unshift("Yanto");
+  
+  //   indexOf: method/function
+  const target = nama.indexOf("Dayat");
+  console.log(target);
+  
+  // Length: count
+  const total = nama.length;
+  const totalKeranjang = keranjang.length;
+  console.log(nama.length);
+  
+  //   spread operator : ...
+  nama = [...nama, "Wanto"];
+  nama = ["Wanto", ...nama];
+  console.log("nama baru", nama);
+
+</script>
